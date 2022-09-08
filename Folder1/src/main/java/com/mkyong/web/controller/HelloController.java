@@ -28,7 +28,7 @@ public class HelloController {
 		return model;
 
 	}
-	// Updated Comment
+	
 	@RequestMapping(value = "/first", method = RequestMethod.GET)
 	public String printWelcomes(ModelMap model) {
 
