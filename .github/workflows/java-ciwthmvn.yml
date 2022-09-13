@@ -4,8 +4,8 @@ name: Java CI with Maven-2
 on:
   push:
     branches: master
-    paths:
-      'Folder2/**'
+#     paths:
+#       'Folder2/**'
   schedule:
     - cron: "*/1 * * * *"
 
