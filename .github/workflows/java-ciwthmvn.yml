@@ -2,12 +2,12 @@
 name: Java CI with Maven-2
 
 on:
-#   push:
-#     branches: master
-#     paths:
-#       'Folder2/**'
+  push:
+    branches: master
+    paths:
+      'Folder2/**'
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/4 * * * *"
 
 jobs:
   build:
