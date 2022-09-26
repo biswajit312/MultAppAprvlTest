@@ -26,6 +26,7 @@ jobs:
          role-session-name: GitHubActions
          role-duration-seconds: 1200
          role-skip-session-tagging: true
+         aws-region: us-west-2
       - name: Upload to S3
         run: aws s3api create-bucket --bucket my-bucket
 
