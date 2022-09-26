@@ -22,7 +22,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-         role-to-assume: arn:aws:iam::447509417119:role/Test_Role
+         role-to-assume: arn:aws:iam::917342262994:role/Add-policy-s3-create
          role-session-name: GitHubActions
          role-duration-seconds: 1200
          role-skip-session-tagging: true
