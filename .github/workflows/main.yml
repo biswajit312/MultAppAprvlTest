@@ -28,7 +28,7 @@ jobs:
          role-skip-session-tagging: true
          aws-region: us-west-2
       - name: Upload to S3
-        run: aws s3api create-bucket --bucket s3bucket0107
+        run: aws s3api create-bucket --bucket s3bucket0107 --region us-west-2
 
 
 
