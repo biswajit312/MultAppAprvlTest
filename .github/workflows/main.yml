@@ -22,13 +22,13 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-         role-to-assume: arn:aws:iam::847370586410:role/JD-AppModernization-SME-Role
+         role-to-assume: arn:aws:iam::447509417119:role/Test_Role
          role-session-name: GitHubActions
          role-duration-seconds: 1200
          role-skip-session-tagging: true
          aws-region: us-west-2
       - name: Upload to S3
-        run: aws s3api create-bucket --bucket my-bucket
+        run: aws s3api create-bucket --bucket s3bucket0107
 
 
 
