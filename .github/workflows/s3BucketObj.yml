@@ -29,6 +29,8 @@ jobs:
          aws-region: us-west-2
       - name: Upload to S3
         run: aws s3api create-bucket --bucket s3bucket0107 --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 --object-lock-enabled-for-bucket
+      - name: Versioning
+        run: aws s3api put-bucket-versioning --bucket s3bucket0107 --versioning-configuration Status=Enabled
 
 
 
