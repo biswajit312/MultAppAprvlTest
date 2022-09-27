@@ -1,4 +1,4 @@
-name: addS3BucketAWS
+name: S3BucketObjLock
 on:
   workflow_dispatch:
 
