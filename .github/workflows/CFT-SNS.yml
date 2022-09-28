@@ -72,7 +72,8 @@ jobs:
         with:
          name: ${{ inputs.name }}
          template: ${{inputs.resource}}/resource.yml
-         parameter-overrides: file://${{ github.workspace }}/${{inputs.resource}}/env_params/${{inputs.environment}}.json
+         PLAN_NAME: env_params/${{ inputs.environment }}.yml 
+#          parameter-overrides: file://${{ github.workspace }}/${{inputs.resource}}/env_params/${{inputs.environment}}.json
 #       env: 
 #         Json_variable: ${{ github.workspace }}/${{inputs.resource}}/env_params/${{inputs.environment}}.json
        
