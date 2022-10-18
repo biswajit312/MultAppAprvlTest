@@ -25,21 +25,25 @@ jobs:
         cache: maven
 #     - name: Build with Maven
 #       run: mvn -B package --file Folder2/pom.xml
-    - name: Build and analyze
-      uses: sonarsource/sonarqube-scan-action@master
-      with:
-       githubToken: ${{ secrets.GH_TOKEN }}
-       projectKey: "JD-test"
-       projectName: "JD-test"
-      env:
-       host: ${{ secrets.SONAR_HOST_URL }}
-       token: ${{ secrets.SONAR_TOKEN }}
+#     - name: Build and analyze
+#       uses: sonarsource/sonarqube-scan-action@master
+#       with:
+#        githubToken: ${{ secrets.GH_TOKEN }}
+#        projectKey: "JD-test"
+#        projectName: "JD-test"
+#       env:
+#        host: ${{ secrets.SONAR_HOST_URL }}
+#        token: ${{ secrets.SONAR_TOKEN }}
 #     - name: SonarQube Scan
 #       uses: sonarsource/sonarqube-scan-action@master
 #       env:
 #         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 #         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-
+    - name: SonarQube Scan
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
        
 
