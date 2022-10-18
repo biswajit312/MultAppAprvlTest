@@ -27,11 +27,9 @@ jobs:
 #       run: mvn -B package --file Folder2/pom.xml
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
-      with:
-        sonar.projectKey: "test1"
-        sonar.sources: .
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
        
 
