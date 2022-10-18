@@ -27,14 +27,14 @@ jobs:
 #       run: mvn -B package --file Folder2/pom.xml
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
-      with:
-#         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-#         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 #         SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
-        url: ${{ secrets.SONAR_HOST_URL }}
-        token: ${{ secrets.SONAR_TOKEN }}
-        projectName: TestProj
-        projectKey: TestProj
+#         url: ${{ secrets.SONAR_HOST_URL }}
+#         token: ${{ secrets.SONAR_TOKEN }}
+#         projectName: TestProj
+#         projectKey: TestProj
 
        
 
