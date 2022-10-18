@@ -29,10 +29,11 @@ jobs:
       uses: sonarsource/sonarqube-scan-action@master
       with:
        githubToken: ${{ secrets.GH_TOKEN }}
-       host: ${{ secrets.SONAR_HOST_URL }}
-       token: ${{ secrets.SONAR_TOKEN }}
        projectKey: "JD-test"
        projectName: "JD-test"
+      env:
+       host: ${{ secrets.SONAR_HOST_URL }}
+       token: ${{ secrets.SONAR_TOKEN }}
 #     - name: SonarQube Scan
 #       uses: sonarsource/sonarqube-scan-action@master
 #       env:
